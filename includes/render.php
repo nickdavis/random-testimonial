@@ -39,7 +39,7 @@ function do_random_testimonial() {
 		while ( $query->have_posts() ) : $query->the_post();
 			$testimonials[] = array(
 				'name'    => get_the_title(),
-				'content' => base64_encode( wpautop( get_the_content() ) ),
+				'content' => wpautop( addslashes( htmlspecialchars( get_the_content(), ENT_QUOTES | ENT_SUBSTITUTE ) ) ),
 			);
 		endwhile;
 	endif;

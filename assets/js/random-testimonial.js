@@ -5,8 +5,6 @@ jQuery(function ($) {
     var data_count = $($data).length;
     var child_count = $($child).length;
 
-    console.log( $data );
-
     if (data_count >= child_count) {
         $child.each(function (index) {
             /**
@@ -23,12 +21,10 @@ jQuery(function ($) {
              */
             //$data.splice($.inArray(rand, $data), 1);
 
-                console.log( rand );
-
             var $this = $(this);
 
             if(rand['content']) {
-                var content = atob(rand['content']);
+                var content = rand['content'];
                 $this.prepend(content);
             }
 
