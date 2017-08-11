@@ -33,5 +33,6 @@ define( 'RANDOM_TESTIMONIAL_URL', plugin_dir_url( __FILE__ ) );
 define( 'RANDOM_TESTIMONIAL_FILE', __FILE__ );
 
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/assets.php';
+require_once RANDOM_TESTIMONIAL_DIR . 'includes/customizer.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/post-type.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/render.php';
