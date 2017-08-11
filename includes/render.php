@@ -19,9 +19,17 @@ use WP_Query;
  * @since 2.0.0
  */
 function do_random_testimonial() {
-	$div_class     = apply_filters( 'random_testimonial_div_class', 'testimonial_block' );
-	$title         = apply_filters( 'random_testimonial_title', 'What customers say about us' );
-	$heading_tag   = apply_filters( 'random_testimonial_heading_tag', 'h2' );
+	$div_class = apply_filters( 'random_testimonial_div_class', 'testimonial_block' );
+
+	// Check for customizer, if not do fall back.
+	$title = get_theme_mod( 'nd_random_testimonial_title' );
+
+	if ( empty ( $title ) ) {
+		$title_text  = apply_filters( 'random_testimonial_title', 'What customers say about us' );
+		$heading_tag = apply_filters( 'random_testimonial_heading_tag', 'h2' );
+
+		$title = "<{$heading_tag}>{$title_text}</{$heading_tag}>";
+	}
 
 	$args = array(
 		'post_type'      => 'testimonial',
