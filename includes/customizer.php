@@ -31,7 +31,7 @@ function register_with_customizer() {
 	 */
 	$wp_customize->add_section( $prefix . '_random_testimonial', array(
 		'title'    => __( 'Random Testimonial', 'hamiltonhealth' ),
-		'priority' => 10,
+		//'priority' => 100,
 	) );
 
 	/**
