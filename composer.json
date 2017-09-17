@@ -3,7 +3,8 @@
     "description": "WordPress plugin to display a random testimonial on your website",
     "type": "wordpress-plugin",
     "require": {
-        "composer/installers": "^1.4"
+        "composer/installers": "^1.4",
+        "htmlburger/carbon-fields": "^2.0"
     },
     "authors": [
         {
