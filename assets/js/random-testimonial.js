@@ -1,7 +1,6 @@
 jQuery(function ($) {
-    // Get all image URLs from the parent UL data attribute (already added in JSON format)
-    var $data = $('.testimonial_block').data('testimonials');
-    var $child = $('.testimonial_block .testimonial');
+    var $data = $('.random-testimonial').data('testimonials');
+    var $child = $('.random-testimonial__body');
     var data_count = $($data).length;
     var child_count = $($child).length;
 
@@ -24,12 +23,23 @@ jQuery(function ($) {
             var $this = $(this);
 
             if(rand['content']) {
-                var content = rand['content'];
-                $this.prepend(content);
+                // var content = rand['content'];
+                // $this.prepend(content);
+
+                $this.find('.random-testimonial__content').prepend(rand['content']);
             }
 
             if (rand['name']) {
-                $this.find('.attribution').text(rand['name']);
+                if (rand['byline']) {
+                    rand['name'] = rand['name'] + ',';
+                }
+
+                $this.find('.random-testimonial__name').prepend(rand['name']);
+            }
+
+            if (rand['byline']) {
+
+                $this.find('.random-testimonial__byline').text(rand['byline']);
             }
         });
     }
