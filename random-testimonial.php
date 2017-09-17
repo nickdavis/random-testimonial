@@ -32,7 +32,20 @@ define( 'RANDOM_TESTIMONIAL_DIR', trailingslashit( plugin_dir_path( __FILE__ ) )
 define( 'RANDOM_TESTIMONIAL_URL', plugin_dir_url( __FILE__ ) );
 define( 'RANDOM_TESTIMONIAL_FILE', __FILE__ );
 
+add_action( 'after_setup_theme', 'crb_load' );
+/**
+ * Loads Carbon Fields.
+ *
+ * @since 3.0.0
+ */
+function crb_load() {
+	require_once RANDOM_TESTIMONIAL_DIR . 'vendor/autoload.php';
+
+	\Carbon_Fields\Carbon_Fields::boot();
+}
+
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/assets.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/customizer.php';
+require_once RANDOM_TESTIMONIAL_DIR . 'includes/fields.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/post-type.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/render.php';
