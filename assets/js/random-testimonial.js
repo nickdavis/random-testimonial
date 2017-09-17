@@ -23,9 +23,6 @@ jQuery(function ($) {
             var $this = $(this);
 
             if(rand['content']) {
-                // var content = rand['content'];
-                // $this.prepend(content);
-
                 $this.find('.random-testimonial__content').prepend(rand['content']);
             }
 
@@ -38,7 +35,6 @@ jQuery(function ($) {
             }
 
             if (rand['byline']) {
-
                 $this.find('.random-testimonial__byline').text(rand['byline']);
             }
         });
