@@ -53,7 +53,7 @@ function do_random_testimonial( $view = '' ) {
 				'name'      => get_the_title(),
 				'byline'    => get_post_meta( get_the_ID(), '_rt_byline', true ),
 				'content'   => wpautop( addslashes( htmlspecialchars( get_the_content(), ENT_QUOTES | ENT_SUBSTITUTE ) ) ),
-				'image_url' => wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' ),
+				'image_url' => wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'full' ),
 			);
 		endwhile;
 	endif;

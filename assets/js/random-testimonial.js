@@ -37,6 +37,10 @@ jQuery(function ($) {
             if (rand['byline']) {
                 $this.find('.random-testimonial__byline').text(rand['byline']);
             }
+
+            if (rand['image_url'] && $('.random-testimonial').hasClass('testimonial_image' ) ) {
+                $this.find('.random-testimonial__image').attr('src',rand['image_url']).removeClass('random-testimonial__image--inactive');
+            }
         });
     }
 });
