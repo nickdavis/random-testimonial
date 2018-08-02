@@ -1,15 +1,15 @@
 {
     "name": "nickdavis/random-testimonial",
-    "description": "WordPress plugin to display a random testimonial on your website",
+    "description": "WordPress plugin to display a random testimonial on your website.",
     "type": "wordpress-plugin",
-    "require": {
-        "composer/installers": "^1.4",
-        "htmlburger/carbon-fields": "^2.0"
-    },
     "authors": [
         {
             "name": "Nick Davis",
-            "email": "nick@iamnickdavis.com"
+            "email": "inbox@nickdavis.co"
         }
-    ]
+    ],
+    "require": {
+        "composer/installers": "^1.4",
+        "htmlburger/carbon-fields": "^2.0"
+    }
 }
