@@ -39,7 +39,10 @@ add_action( 'after_setup_theme', 'crb_load' );
  * @since 3.0.0
  */
 function crb_load() {
-	require_once RANDOM_TESTIMONIAL_DIR . 'vendor/autoload.php';
+	$autoloader = RANDOM_TESTIMONIAL_DIR . 'vendor/autoload.php';
+	if ( is_readable( $autoloader ) ) {
+		require_once $autoloader;
+	}
 
 	\Carbon_Fields\Carbon_Fields::boot();
 }
