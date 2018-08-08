@@ -36,7 +36,7 @@ add_action( 'after_setup_theme', 'crb_load' );
 /**
  * Loads Carbon Fields.
  *
- * @since 3.0.0
+ * @since 2.1.1
  */
 function crb_load() {
 	$autoloader = RANDOM_TESTIMONIAL_DIR . 'vendor/autoload.php';
