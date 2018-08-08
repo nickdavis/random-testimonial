@@ -16,6 +16,8 @@ use WP_Query;
 /**
  * Renders the random testimonial.
  *
+ * @todo Add a filter for the tax query
+ *
  * @since 1.0.0
  *
  * @param string $view
@@ -37,6 +39,14 @@ function do_random_testimonial( $view = '' ) {
 	$args = array(
 		'post_type'      => 'testimonial',
 		'posts_per_page' => 50,
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'testimonial-type',
+				'field'    => 'slug',
+				'terms'    => 'staff',
+				'operator' => 'NOT IN'
+			),
+		),
 	);
 
 	$query = new WP_Query( $args );
