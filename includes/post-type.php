@@ -16,6 +16,7 @@ add_action( 'init', __NAMESPACE__ . '\register_testimonial_post_type' );
  * Register Testimonial post type.
  *
  * @since 1.0.0
+ * @since 2.1.0 Added Testimonal Type taxonomy
  */
 function register_testimonial_post_type() {
 	$labels = array(
@@ -47,6 +48,7 @@ function register_testimonial_post_type() {
 		'menu_position'      => null,
 		'supports'           => array( 'title', 'editor', 'thumbnail' ),
 		'menu_icon'          => 'dashicons-format-chat',
+		'taxonomies'         => array( 'testimonial-type' ),
 	);
 
 	register_post_type( 'testimonial', $args );

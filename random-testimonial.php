@@ -52,3 +52,4 @@ require_once RANDOM_TESTIMONIAL_DIR . 'includes/customizer.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/fields.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/post-type.php';
 require_once RANDOM_TESTIMONIAL_DIR . 'includes/render.php';
+require_once RANDOM_TESTIMONIAL_DIR . 'includes/taxonomy.php';
