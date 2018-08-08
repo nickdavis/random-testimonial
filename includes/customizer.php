@@ -30,7 +30,7 @@ function register_with_customizer() {
 	 * Add section.
 	 */
 	$wp_customize->add_section( $prefix . '_random_testimonial', array(
-		'title'    => __( 'Random Testimonial', 'hamiltonhealth' ),
+		'title'    => __( 'Random Testimonial', 'random-testimonial' ),
 		//'priority' => 100,
 	) );
 
@@ -38,7 +38,7 @@ function register_with_customizer() {
 	 * Add settings.
 	 */
 	$wp_customize->add_setting( $prefix . '_random_testimonial_title', array(
-		'default'           => __( '', 'hamiltonhealth' ),
+		'default'           => __( '', 'random-testimonial' ),
 		'sanitize_callback' => 'wp_kses_post',
 		'transport'         => 'postMessage',
 	) );
@@ -50,7 +50,7 @@ function register_with_customizer() {
 			$wp_customize,
 			$prefix . '_random_testimonial_title',
 			array(
-				'label'    => __( 'Title', 'hamiltonhealth' ),
+				'label'    => __( 'Title', 'random-testimonial' ),
 				'section'  => $prefix . '_random_testimonial',
 				'settings' => $prefix . '_random_testimonial_title',
 				'type'     => 'text',
