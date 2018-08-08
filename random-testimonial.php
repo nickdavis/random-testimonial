@@ -3,7 +3,7 @@
  * Plugin Name: Random Testimonial
  * Plugin URI: https://github.com/nickdavis/random-testimonial
  * Description: Displays a single, random testimonial on the front end of your website. This plugin is aimed at developers and must be manually integrated into your theme.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author: Nick Davis
  * Author URI: http://iamnickdavis.com
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define plugin constants
-define( 'RANDOM_TESTIMONIAL_VERSION', '2.0.0' );
+define( 'RANDOM_TESTIMONIAL_VERSION', '2.1.0' );
 define( 'RANDOM_TESTIMONIAL_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'RANDOM_TESTIMONIAL_URL', plugin_dir_url( __FILE__ ) );
 define( 'RANDOM_TESTIMONIAL_FILE', __FILE__ );
