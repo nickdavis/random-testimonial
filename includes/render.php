@@ -70,7 +70,7 @@ function do_random_testimonial( $view = '' ) {
 
 	wp_reset_postdata();
 
-	$testimonials = json_encode( $testimonials );
+    $testimonials = wp_json_encode( $testimonials, JSON_HEX_APOS | JSON_HEX_QUOT | ENT_QUOTES );
 
 	if ( empty( $view ) ) {
 		include RANDOM_TESTIMONIAL_DIR . 'views/random-testimonial.php';
